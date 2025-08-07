@@ -16,6 +16,12 @@
       text-align: center;
       color: #2c3e50;
     }
+    p.intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-size: 1.05rem;
+    }
     .section {
       margin-bottom: 2.5rem;
     }
@@ -31,18 +37,28 @@
     a:hover {
       text-decoration: underline;
     }
-    .preview {
-      margin-top: 0.3rem;
-      max-width: 100%;
-      height: auto;
-      border: 1px solid #ddd;
-      border-radius: 4px;
+    .footer {
+      margin-top: 4rem;
+      font-size: 0.95rem;
+      border-top: 1px solid #ccc;
+      padding-top: 2rem;
+      color: #555;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .footer h3 {
+      color: #2c3e50;
     }
   </style>
 </head>
 <body>
   <h1>NHTS 2022 Mode Share Visualizations</h1>
 
+  <p class="intro">
+    These interactive visuals explore travel behavior in the U.S. using the 2022 National Household Travel Survey.
+    They show how household vehicle access, income, urban/rural status, age, gender, and trip purpose influence transportation mode choice.
+  </p>
   <div class="section">
     <h2><a href="mode_share_by_vehicle_access.html">Mode Share by Vehicle Ownership</a></h2>
     <p>Shows how the presence of household vehicles influences transportation mode choice.</p>
@@ -77,6 +93,25 @@
     <h2><a href="walk_share_by_region.html">Walk Share by Census Division</a></h2>
     <p>Highlights regional variation in walking rates across the U.S.</p>
   </div>
-
+  
+  <div class="footer">
+    <h3>About and Methods</h3>
+    <p>
+      These visualizations were created using Python (Pandas, Plotly) to analyze public microdata from the 
+      <a href="https://nhts.ornl.gov/">2022 National Household Travel Survey (NHTS)</a>.
+    </p>
+    <p>
+      The dataset includes detailed trip records linked to household and individual-level attributes such as 
+      income, age, gender, vehicle access, and location. Exploratory analysis and cross-tabulation were used 
+      to estimate the modal share of walking, biking, transit, and driving across demographic and regional groups.
+    </p>
+    <p>
+      Some charts reflect multivariate relationships (e.g. vehicle ownership by income and region), while others 
+      focus on descriptive insights such as trip purpose or age group behavior.
+    </p>
+    <p>
+      This project was built as part of a transportation behavior analysis portfolio.
+    </p>
+  </div>
 </body>
 </html>
